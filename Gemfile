@@ -29,7 +29,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'bootstrap', '~> 4.3', '>= 4.3.1'
 
-gem 'therubyracer', '~> 0.12.3'
+gem 'mini_racer', '~> 0.2.6'
 
 gem 'omniauth', '~> 1.9'
 
