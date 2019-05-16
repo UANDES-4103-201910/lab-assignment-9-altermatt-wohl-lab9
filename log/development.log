@@ -2250,3 +2250,402 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-05-16 15:49:33 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 69ms (Views: 66.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-16 15:49:35 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 47ms (Views: 43.2ms | ActiveRecord: 0.0ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/alberto/Escritorio/lab-assignment-9-altermatt-wohl-lab9/app/models/application_record.rb:1)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/alberto/Escritorio/lab-assignment-9-altermatt-wohl-lab9/app/models/application_record.rb:1)
+Started GET "/" for ::1 at 2019-05-16 15:53:59 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1125.7ms)
+Completed 500 Internal Server Error in 1134ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_user_registration' for #<#<Class:0x00007fec6c3a5d08>:0x00007fec801a9540>
+Did you mean?  new_user_registration_url
+               new_user_registration_path):
+    11:   </div>
+    12:   <div class="btn-group btn-lg">
+    13:     <button id="Log in" type="submit" class="btn btn-default btn-lg" role="button"> <%= link_to 'Log In', user_session %></button>
+    14:     <button id="Sign in" type="submit" class="btn btn-default btn-lg" role="button"> <%= link_to 'Sign In', new_user_registration %></button> 
+    15:   </div>
+    16:   <div class="actions">
+    17:     <%= f.submit "Log In" %>
+  
+app/views/sessions/new.html.erb:14:in `block in _app_views_sessions_new_html_erb__614953997561071043_70326869118760'
+app/views/sessions/new.html.erb:1:in `_app_views_sessions_new_html_erb__614953997561071043_70326869118760'
+Started GET "/" for ::1 at 2019-05-16 15:54:17 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 71ms (Views: 67.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/css/custom.css" for ::1 at 2019-05-16 15:54:17 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/css/custom.css"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/login" for ::1 at 2019-05-16 15:54:20 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OfOwMupCXUZ+9bKd3GpyEVq9hoph7dGmAHhl50dH9YMVXtBqSEUGTd2tm/WD//fAwRhEs+8Z7KMhNk9KiKOcdg==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 656ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `logged_in_url' for #<SessionsController:0x00007fec802da798>
+Did you mean?  log_in_url):
+  
+app/controllers/sessions_controller.rb:7:in `create'
+Started GET "/" for ::1 at 2019-05-16 15:55:13 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 44ms (Views: 41.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2019-05-16 15:55:14 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vf/hIQ3IaJ1VRenR1RtvjAFAzEVNQE2uI81neNmDxd2Zrb3LMzO9uJTfvQzyD2g1A8CcmgE84nPueEutNHQR2w==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 685ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `logged_in_url' for #<SessionsController:0x00007fec6d6b9db8>
+Did you mean?  log_in_url):
+  
+app/controllers/sessions_controller.rb:7:in `create'
+Started POST "/login" for ::1 at 2019-05-16 15:55:53 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vf/hIQ3IaJ1VRenR1RtvjAFAzEVNQE2uI81neNmDxd2Zrb3LMzO9uJTfvQzyD2g1A8CcmgE84nPueEutNHQR2w==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 757ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `logged_in_url' for #<SessionsController:0x00007fec6d9c7690>
+Did you mean?  log_in_url):
+  
+app/controllers/sessions_controller.rb:7:in `create'
+Started GET "/" for ::1 at 2019-05-16 15:55:59 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/alberto/Escritorio/lab-assignment-9-altermatt-wohl-lab9/app/views/sessions/new.html.erb:21: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^):
+  
+app/views/sessions/new.html.erb:21: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for ::1 at 2019-05-16 15:56:26 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/alberto/Escritorio/lab-assignment-9-altermatt-wohl-lab9/app/views/sessions/new.html.erb:22: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^):
+  
+app/views/sessions/new.html.erb:22: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for ::1 at 2019-05-16 15:57:08 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 47ms (Views: 44.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/css/custom.css" for ::1 at 2019-05-16 15:57:08 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/css/custom.css"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/login" for ::1 at 2019-05-16 15:57:12 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U3AtnG6pYvARtokIU3T1ysH2J+mcx8VAuQ34HMVpwaR/3U3EzK45+7LuoGAM4XAbWlPl0BIz+EWYQ9KxCo2oUQ==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 693ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `logged_in_url' for #<SessionsController:0x00007fec6d3720d8>
+Did you mean?  log_in_url):
+  
+app/controllers/sessions_controller.rb:7:in `create'
+Started GET "/" for ::1 at 2019-05-16 15:57:27 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 49ms (Views: 45.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-16 15:57:28 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 50ms (Views: 47.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-16 15:57:29 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 51ms (Views: 47.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-16 15:58:43 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"users"}, missing required keys: [:id]):
+    11:   </div>
+    12: <% end %>
+    13:   <div class="btn-group btn-lg">
+    14:     <button id="Log in" type="submit" class="btn btn-default btn-lg" role="button"> <%= link_to 'Log In', user_path %></button>
+    15:     <button id="Sign in" type="submit" class="btn btn-default btn-lg" role="button"> <%= link_to 'Sign In', new_user_registration_path %></button> 
+    16:   </div>
+    17:  </div>
+  
+app/views/sessions/new.html.erb:14:in `_app_views_sessions_new_html_erb__614953997561071043_70326712517380'
+Started GET "/" for ::1 at 2019-05-16 15:59:39 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1023.7ms)
+Completed 500 Internal Server Error in 1032ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user_registration' for #<#<Class:0x00007fec6c3a5d08>:0x00007fec6d718610>
+Did you mean?  user_registration_url
+               user_registration_path):
+    11:   </div>
+    12: <% end %>
+    13:   <div class="btn-group btn-lg">
+    14:     <button id="Log in" type="submit" class="btn btn-default btn-lg" role="button"> <%= link_to 'Log In', user_registration %></button>
+    15:     <button id="Sign in" type="submit" class="btn btn-default btn-lg" role="button"> <%= link_to 'Sign In', new_user_registration_path %></button> 
+    16:   </div>
+    17:  </div>
+  
+app/views/sessions/new.html.erb:14:in `_app_views_sessions_new_html_erb__614953997561071043_70326712584180'
+Started GET "/" for ::1 at 2019-05-16 15:59:46 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1062.5ms)
+Completed 500 Internal Server Error in 1071ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user_registration' for #<#<Class:0x00007fec6c3a5d08>:0x00007fec804185d8>
+Did you mean?  user_registration_url
+               user_registration_path):
+    11:   </div>
+    12: <% end %>
+    13:   <div class="btn-group btn-lg">
+    14:     <button id="Log in" type="submit" class="btn btn-default btn-lg" role="button"> <%= link_to 'Log In', user_registration %></button>
+    15:     <button id="Sign in" type="submit" class="btn btn-default btn-lg" role="button"> <%= link_to 'Sign In', new_user_registration_path %></button> 
+    16:   </div>
+    17:  </div>
+  
+app/views/sessions/new.html.erb:14:in `_app_views_sessions_new_html_erb__614953997561071043_70326870394720'
+Started GET "/" for ::1 at 2019-05-16 16:00:01 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 47ms (Views: 44.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/css/custom.css" for ::1 at 2019-05-16 16:00:01 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/css/custom.css"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users" for ::1 at 2019-05-16 16:00:05 -0400
+  
+ActionController::RoutingError (undefined method `user_signed_in?' for UsersController:Class):
+  
+app/controllers/users_controller.rb:5:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<top (required)>'
+Started GET "/" for ::1 at 2019-05-16 16:03:36 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 55ms (Views: 52.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/css/custom.css" for ::1 at 2019-05-16 16:03:36 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/css/custom.css"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/login" for ::1 at 2019-05-16 16:03:39 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lcJyMyj+T0RmAnxjuctCzrRbmZNMjsP2m3JofBdV6Bm5bxJrivkUT8VaVQvmXscfL/5bqsJ6/vO6PELR2LGB7A==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 673ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `logged_in_url' for #<SessionsController:0x00007fec6cc4aa08>
+Did you mean?  log_in_url):
+  
+app/controllers/sessions_controller.rb:7:in `create'
+Started POST "/login" for ::1 at 2019-05-16 16:03:54 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lcJyMyj+T0RmAnxjuctCzrRbmZNMjsP2m3JofBdV6Bm5bxJrivkUT8VaVQvmXscfL/5bqsJ6/vO6PELR2LGB7A==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 772ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `logged_in_url' for #<SessionsController:0x00007fec6ced0098>
+Did you mean?  log_in_url):
+  
+app/controllers/sessions_controller.rb:7:in `create'
