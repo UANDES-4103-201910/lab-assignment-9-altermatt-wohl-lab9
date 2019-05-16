@@ -11,4 +11,7 @@ Rails.application.routes.draw do
   get '/sign_in' => 'registrations#new', as: :registrations
   post '/sign_in' => 'registrations#create', as: :sign_in
 
+  #post '/logged_in' => 'users#create', as: :logged_in
+  #delete '/logged_out' => 'users#destroy', as: :logged_out
+
 end
