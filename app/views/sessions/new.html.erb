@@ -1,16 +1,26 @@
  <%= form_for(:session, url: log_in_path) do |f| %>
-  <div class="form-group">
+  <div class="container">
+   <div class="jumbotron">
+     <div class="form-group form-group-lg">
     <%= f.label :email,"Email" %><br />
     <%= f.email_field :email, autofocus: true  %>
   </div>
-
-  <div class="form-group">
+    <div class="form-group">
     <%= f.label :password, "Password" %><br />
     <%= f.password_field :password, autocomplete: "off"  %>
+  </div>
+  <div class="btn-group btn-lg">
+    <button id="Log in" type="submit" class="btn btn-default btn-lg" role="button"> <%= link_to 'Log In', user_session %></button>
+    <button id="Sign in" type="submit" class="btn btn-default btn-lg" role="button"> <%= link_to 'Sign In', registrations_path %></button> 
   </div>
   <div class="actions">
     <%= f.submit "Log In" %>
   </div>
   <br>
+  <div class="actions" >
+    <%= f.submit "Sign In" %>
+  </div>
 <% end %>
 <%= link_to 'Sign In', registrations_path %>
+   </div>
+ </div>
