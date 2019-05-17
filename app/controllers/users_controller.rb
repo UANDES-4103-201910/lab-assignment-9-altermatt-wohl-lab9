@@ -1,20 +1,23 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [:create, :show, :edit, :update, :destroy]
   before_action :is_user_logged_in?
-  before_action :authenticate_user!
-  #user_signed_in?
+  before_action :authenticate_user!, except: [ :index, :show ]
+  user_signed_in?
   #current_user
-  #user_session
+  user_session
 
   # GET /users
   # GET /users.json
   def index
     @users = User.all
+    @user = User.new
   end
 
   # GET /users/1
   # GET /users/1.json
   def show
+	format.html { redirect_to @user, notice: 'You hace succesfully logged in.' }
+        format.json { render :show, status: :created, location: @user }
   end
 
   # GET /users/new
@@ -76,6 +79,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit( :name, :last_name, :email, :password, :phone )
+      params.require(:user).permit(:name, :last_name, :email, :password, :phone )
     end
 end
