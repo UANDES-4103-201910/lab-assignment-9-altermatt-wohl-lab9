@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   before_action :is_user_logged_in?
   before_action :authenticate_user!
   #user_signed_in?
-  current_user
+  #current_user
   #user_session
 
   # GET /users
