@@ -35,7 +35,8 @@ gem 'mini_racer', '~> 0.2.6'
 
 gem 'omniauth', '~> 1.9'
 
-gem 'omniauth-google-oauth2', '~> 0.6.1'
+gem 'omniauth-facebook'
+#gem 'omniauth-google-oauth2', '~> 0.6.1'
 
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 
