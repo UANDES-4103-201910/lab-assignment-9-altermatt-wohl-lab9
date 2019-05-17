@@ -2,9 +2,9 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :is_user_logged_in?
   before_action :authenticate_user!
-  user_signed_in?
+  #user_signed_in?
   current_user
-  user_session
+  #user_session
 
   # GET /users
   # GET /users.json
