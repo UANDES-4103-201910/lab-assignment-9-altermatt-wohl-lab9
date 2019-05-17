@@ -5,11 +5,11 @@ Rails.application.routes.draw do
 
   root :to => 'users#index'
 
-  post '/login',   to: 'sessions#create', as: :log_in
-  delete '/log_out' => 'sessions#destroy', as: :log_out
+  #post '/login',   to: 'sessions#create', as: :log_in
+  #delete '/log_out' => 'sessions#destroy', as: :log_out
 
-  get '/sign_in' => 'registrations#new', as: :registrations
-  post '/sign_in' => 'registrations#create', as: :sign_in
+  #get '/sign_in' => 'registrations#new', as: :registrations
+  #post '/sign_in' => 'registrations#create', as: :sign_in
 
   #post '/logged_in' => 'users#create', as: :logged_in
   #delete '/logged_out' => 'users#destroy', as: :logged_out
