@@ -11,4 +11,8 @@ class SessionsController < ApplicationController
 		#complete this method
 		redirect_to logged_out_url
 	end
+
+	def logged_in_url
+		url= "users#show"
+	end
 end
