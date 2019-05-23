@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(version: 2019_05_16_170812) do
     t.string "password"
     t.string "address"
     t.string "provider"
+    t.boolean "is_admin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "encrypted_password", default: "", null: false
