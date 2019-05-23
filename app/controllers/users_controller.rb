@@ -51,7 +51,7 @@ class UsersController < ApplicationController
     #complete this method
     respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
+        format.html { redirect_to root_path, notice: 'User was successfully updated.' }
         format.json { render :show, status: :ok, location: @user }
       else
         format.html { render :edit }
@@ -66,7 +66,7 @@ class UsersController < ApplicationController
     #complete this method
 	@user.destroy
         respond_to do |format|
-        	format.html { redirect_to users_url, notice: 'You have logged out from your session.' }
+        	format.html { redirect_to root_path, notice: 'You have logged out from your session.' }
         	format.json { head :no_content }
         end
   end

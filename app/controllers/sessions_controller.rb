@@ -1,18 +1,34 @@
 class SessionsController < ApplicationController
 	def new
+		if current_user
+			redirect_to current_user
+		end
 	end
 
 	def create
+		user = User.find(user_params)
+		if user.save?
+			session[:current_user_id] = user.id
+			flash[:notice] =  'You have successfully logged_in'
+			redirect_to user
+		else
+			flash[:error] = errors.details
+			redirect_to root_path
+		end
 		#complete this method
-		redirect_to logged_in_url
+
 	end
 
 	def destroy
 		#complete this method
-		redirect_to logged_out_url
+		session[:current_user_id] = nil
+		current_user = session[:current_user_id]
+		flash[:notice] = 'You are logged ot'
+		redirect_to root_path
 	end
 
-	def logged_in_url
-		url= "users#show"
+
+	def user_params
+		params.require(:session).permit(:email, :password)
 	end
 end
