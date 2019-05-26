@@ -7,6 +7,7 @@ class CreateUsers < ActiveRecord::Migration[5.1]
       t.string :address
       t.string :provider
       t.integer :uid
+      t.references :shopping_cart, foreign_key: true
 
       t.timestamps
     end

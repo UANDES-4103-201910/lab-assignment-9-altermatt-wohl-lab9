@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_name: MyString
+  order_date: 2019-05-26 01:27:37
+  ticket_quantity: 1
+  total_paid: 1
+
+two:
+  user_name: MyString
+  order_date: 2019-05-26 01:27:37
+  ticket_quantity: 1
+  total_paid: 1

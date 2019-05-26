@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_26_050717) do
+ActiveRecord::Schema.define(version: 2019_05_26_052737) do
 
   create_table "events", force: :cascade do |t|
     t.string "name"
@@ -30,6 +30,15 @@ ActiveRecord::Schema.define(version: 2019_05_26_050717) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "shopping_carts", force: :cascade do |t|
+    t.string "user_name"
+    t.datetime "order_date"
+    t.integer "ticket_quantity"
+    t.integer "total_paid"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "tickets", force: :cascade do |t|
     t.text "description"
     t.integer "price"
@@ -44,8 +53,10 @@ ActiveRecord::Schema.define(version: 2019_05_26_050717) do
     t.integer "ticket_id"
     t.datetime "time"
     t.boolean "paid"
+    t.integer "shopping_cart_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["shopping_cart_id"], name: "index_user_tickets_on_shopping_cart_id"
     t.index ["ticket_id"], name: "index_user_tickets_on_ticket_id"
     t.index ["user_id"], name: "index_user_tickets_on_user_id"
   end
@@ -57,6 +68,7 @@ ActiveRecord::Schema.define(version: 2019_05_26_050717) do
     t.string "address"
     t.string "provider"
     t.integer "uid"
+    t.integer "shopping_cart_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "email", default: "", null: false
@@ -67,6 +79,7 @@ ActiveRecord::Schema.define(version: 2019_05_26_050717) do
     t.boolean "admin", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["shopping_cart_id"], name: "index_users_on_shopping_cart_id"
   end
 
 end
