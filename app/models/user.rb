@@ -3,6 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   	devise :database_authenticatable, :registerable,
          	:recoverable, :rememberable, :validatable, :omniauthable, :omniauth_providers => [:google_oauth2]
+	belongs_to :shopping_cart
   	has_many :user_tickets	
 	has_many :tickets, :through => :user_tickets
 

@@ -6,14 +6,22 @@
   <thead>
     <tr>
       <th colspan="3"></th>
+     
     </tr>
   </thead>
 
   <tbody>
     <% @events.each do |event| %>
       <tr>
-        <td><%= link_to 'Show', event %></td>
-        <td><%= link_to 'Edit', edit_event_path(event) %></td>
+        <% if can? :read @event %><%= link_to 'Show', show_event_path(@event) %> 
+	      <% if can? :update @event %><%= link_to 'Edit', edit_event_path(@event) %> 
+	       <% end %>
+        <% if user.present? %>
+        <%= link_to "Add to cart", edit_shopping_cart_path %>
+       <% end %>
+       <% if user.present? && shopping_cart.ticket_quantity > 0%>
+          <%= link_to "Remove from cart", remove_shopping_cart_path %>
+       <% end %>
         <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -21,5 +29,12 @@
 </table>
 
 <br>
+<script language=javascript>
+function new_window (URL){
+   window.open(URL,"Shopping Cart","width=300,height=300,scrollbars=NO")
+}
+</script> 
+
+<a href= "shopping_cart_index" onclick="new_window()";> See your Shopping Cart </a>
 
 <%= link_to 'New Event', new_event_path %>
