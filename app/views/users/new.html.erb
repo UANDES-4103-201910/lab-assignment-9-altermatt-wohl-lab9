@@ -1,16 +1,5 @@
-<div class="container">
-	<div class="text-right">
-		<button id="LogOut" type="submit" class="btn btn-default btn-lg" role="button"> <%= link_to 'Log out', log_out_path %> </button>		
-	</div>
-	<div class="jumbotron">
-		<div class="caption">
-			<h1>New User</h1>			 
-		</div>
-		<%= render 'form', user: @user %>
-		<button id="Back" type="submit" class="btn btn-default btn-lg" role="button"><%= link_to 'Back', users_path %></button>
-	</div>
-</div>
 <h1>New User</h1>
 
+<%= render 'form', user: @user %>
 
-
+<%= link_to 'Back', users_path %>

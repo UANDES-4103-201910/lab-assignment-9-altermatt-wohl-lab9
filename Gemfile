@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
-gem 'devise'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 # Use sqlite3 as the database for Active Record
@@ -27,22 +27,6 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-gem 'bootstrap', '~> 4.3', '>= 4.3.1'
-
-gem 'devise-bootstrap-views', '~> 1.0'
-
-gem 'mini_racer', '~> 0.2.6'
-
-gem 'omniauth', '~> 1.9'
-
-gem 'omniauth-facebook'
-
-gem 'cancancan'
-
-#gem 'omniauth-google-oauth2', '~> 0.6.1'
-
-gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
-
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
@@ -51,7 +35,15 @@ gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
-
+# Devise
+gem 'devise'
+#therubyracer
+gem 'therubyracer', '~> 0.12.3'
+#omniauth, for google
+gem 'omniauth', '~> 1.9'
+gem 'omniauth-google-oauth2', '~> 0.6.1'
+#jquery-rails
+gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
