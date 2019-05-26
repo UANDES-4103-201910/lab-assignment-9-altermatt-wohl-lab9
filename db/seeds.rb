@@ -8,7 +8,7 @@
 
 user_1 = User.create(name: 'Francisco', last_name: 'Borie',  phone: '987654321', address: 'San Carlos de Apoquindo 2200', provider: 'google_oauth2', uid: 1001, email: 'fjborie@miuandes.cl', password: 'password123')
 user_2 = User.create(name: 'Diego', last_name: 'Beckdorf', phone: '987654321', address: 'San Carlos de Apoquindo 2200', provider: 'google_oauth2', uid: 1002, email: 'dbeckdor@miuandes.cl', password: 'password123')
-user_3 = User.create(name: 'Maximiliano', last_name: 'Garcia', phone: '987654321', address: 'San Carlos de Apoquindo 2200', provider: 'google_oauth2', uid: 1003, email: 'fjborie@miuandes.cl', password: 'password123')
+user_3 = User.create(name: 'Maximiliano', last_name: 'Garcia', phone: '987654321', address: 'San Carlos de Apoquindo 2200', provider: 'google_oauth2', uid: 1003, email: 'fjborie@miuandes.cl', password: 'password123', admin: true)
 
 place_1 = Place.create(name: 'Estadio Nacional Julio Martínez Prádanos', address:'Av. Grecia 2001', capacity: 50000)
 place_2 = Place.create(name: 'Teatro Nacional Chileno', address:'San Diego 850', capacity: 5000)
